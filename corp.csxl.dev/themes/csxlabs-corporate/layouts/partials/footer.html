@@ -1,0 +1,17 @@
+<footer class="section footer" id="footer">
+    <div class="footer-left">
+      {{ $logo := resources.Get "/images/logo.svg" }}
+      <img src="{{ $logo.RelPermalink }}" alt="CSX Labs Logo" class="footer-logo">
+      <p class="footer-text">CSX Labs is a collection of open research and development laboratories dedicated to exploring, developing, and promoting unsaturated technologies for the advancement of humanity.</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-social">
+        <a href="mailto:info@csxlabs.org" target="_blank" class="footer-link">
+          <span class="material-symbols-outlined size-48 footer-social-icon">mail</span>
+        </a>
+        <a href="https://github.com/CSXL" target="_blank" class="footer-link">
+          <span class="material-symbols-outlined size-48 footer-social-icon">conversion_path</span>
+        </a>
+      </div>
+    </div>
+</footer>

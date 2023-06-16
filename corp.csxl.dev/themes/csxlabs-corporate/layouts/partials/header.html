@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="navbar-left">
+      <a href="#">
+        {{ $image := resources.Get "/images/logo.svg" }}
+        <img src="{{ $image.RelPermalink }}" alt="CSX Labs Logo" class="navbar-logo">
+      </a>
+    </div>
+    <div class="navbar-center">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="navbar-link">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+        </a>
+        {{ end }}
+    </div>
+    <div class="navbar-right">
+      <a href="#contact" class="outlined-button">Contact</a>
+    </div>
+</nav>
