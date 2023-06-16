@@ -278,6 +278,19 @@ Styles for the index page
     gap: 1rem;
   }
 
+  .restricted-resource-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.8rem;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    color: var(--brand-purple);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 0.25rem;
+  }
+
   .hero-button {
     display: grid;
     grid-template-areas: "icon text";
@@ -285,6 +298,8 @@ Styles for the index page
     align-items: center;
     justify-items: center;
     max-width: max-content;
+    position: relative; /* for restricted resource icon */
+    padding-right: 1rem;
   }
 
   .hero-button-icon {
