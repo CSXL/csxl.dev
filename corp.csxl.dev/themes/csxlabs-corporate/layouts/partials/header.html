@@ -1,8 +1,13 @@
 <nav class="navbar">
     <div class="navbar-left">
       <a href="#">
-        {{ $image := resources.Get "/images/logo.svg" }}
-        <img src="{{ $image.RelPermalink }}" alt="CSX Labs Logo" class="navbar-logo">
+        {{ $logo := resources.Get "/images/logo.svg" }}
+        {{ $rocket_only := resources.Get "/images/rocket_only.svg" }}
+        <picture>
+          <source srcset="{{ $rocket_only.RelPermalink }}" media="(max-width: 768px)">
+          <source srcset="{{ $logo.RelPermalink }}">
+          <img src="{{ $logo.RelPermalink }}" alt="CSX Labs Logo" class="navbar-logo">
+        </picture>
       </a>
     </div>
     <div class="navbar-center">
@@ -14,6 +19,6 @@
         {{ end }}
     </div>
     <div class="navbar-right">
-      <a href="#contact" class="outlined-button">Contact</a>
+      <a href="https://goto.csxlabs.org/chat" class="outlined-button">Chat</a>
     </div>
 </nav>
