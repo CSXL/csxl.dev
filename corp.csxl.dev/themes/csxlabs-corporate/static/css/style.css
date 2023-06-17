@@ -818,7 +818,7 @@ span.size-48 {
 .article-container {
   margin: 0 auto;
   padding: 1rem 1rem;
-  max-width: 100%;
+  max-width: 60%;
 }
 
 .article-title {
