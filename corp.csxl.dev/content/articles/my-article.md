@@ -5,6 +5,7 @@ date: 2023-06-16
 draft: true
 tags: ["foo", "bar"]
 ---
+![image](https://csxlabs.org/assets/full_brand.png)
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
 incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor 
 aliquam nulla facilisi cras fermentum odio. A erat nam at lectus urna duis. 
