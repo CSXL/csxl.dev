@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entrypoint: ./corp.csxl.dev
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CSXLABS_CORPORATE }}'
           projectId: csxlabs-corporate
