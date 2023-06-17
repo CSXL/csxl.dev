@@ -821,6 +821,12 @@ span.size-48 {
   max-width: 60%;
 }
 
+@media screen and (max-width: 600px) {
+  .article-container {
+    max-width: 100%;
+  }
+}
+
 .article-title {
   font-size: 2rem;
   font-weight: 600;
