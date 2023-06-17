@@ -100,7 +100,7 @@ Styles for the index page
     margin: 0;
   }
   
-  /* Buttons */
+  /* Buttons and Chips */
   .outlined-button {
     background: linear-gradient(90deg, rgba(143,60,0,1) 0%, rgba(78,0,105,1) 100%);
     background-clip: text;
@@ -118,14 +118,38 @@ Styles for the index page
   }
   
   .outlined-button:hover {
-    background: linear-gradient(90deg, rgba(78,0,105,1) 0%, rgba(143,60,0,1) 100%);
+    background: var(--brand-purple);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 1px solid var(--brand-purple);
     cursor: pointer;
   }
-  
+
+  .outlined-chip {
+    background: linear-gradient(90deg, rgba(143,60,0,1) 0%, rgba(78,0,105,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--white);
+    color: inherit;
+    border: 1px solid var(--brand-orange);
+    font-weight: 300;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0;
+    padding: 0rem 0.5rem;
+    text-decoration: none;
+  }
+  .outlined-chip:hover {
+    background: var(--brand-purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid var(--brand-purple);
+    cursor: pointer;
+  }
+
   .filled-button {
     background-color: var(--brand-purple);
     border: 1px solid var(--brand-purple);
@@ -636,6 +660,11 @@ Styles for the index page
   }
 
 /* Recommended icon sizes */
+span.size-18 {
+  font-size: 18px;
+  font-variation-settings: 'OPSZ' 18;
+}
+
 span.size-20 {
   font-size: 20px;
   font-variation-settings: 'OPSZ' 20;
@@ -644,6 +673,10 @@ span.size-24 {
   font-size: 24px;
   font-variation-settings: 'OPSZ' 24;
 }
+span.size-28 {
+  font-size: 28px;
+  font-variation-settings: 'OPSZ' 28;
+}
 span.size-40 {
   font-size: 40px;
   font-variation-settings: 'OPSZ' 40;
@@ -651,4 +684,57 @@ span.size-40 {
 span.size-48 {
   font-size: 48px;
   font-variation-settings: 'OPSZ' 48;
+}
+
+/* Post Metadata */
+.metadata {
+  display: grid;
+  grid-template-rows: minmax(1rem, auto);
+  grid-template-columns: min-content;
+  grid-template-areas: "metadata-icons metadata-items";
+  column-gap: 0.5rem;
+}
+
+.metadata-icons {
+  grid-area: metadata-icons;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
+  padding: 0.25rem 0.25rem;
+  justify-items: left;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(143,60,0,1) 0%, rgba(78,0,105,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: var(--white);
+  color: inherit;
+  border: 1px solid var(--brand-orange);
+  font-weight: 300;
+  border-radius: 2px;
+  text-decoration: none;
+  row-gap: 0.5rem;
+}
+
+.outlined-icons {
+  display: inline-block;
+  margin: 0;
+  padding: 0rem 0rem;
+  text-decoration: none;
+}
+
+.metadata-items {
+  grid-area: metadata-items;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
+  column-gap: 0.5rem;
+  justify-items: left;
+  align-items: center;
+}
+
+.metadata-item {
+  display: flex;
+  margin-right: 1rem;
+  gap: 0.5rem;
+  justify-items: left;
+  align-items: center;
 }

@@ -1,0 +1,32 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div class="metadata">
+    <div class="metadata-icons">
+        <span class="material-symbols-outlined size-24 outlined-icon">person</span>
+        <span class="material-symbols-outlined size-24">schedule</span>
+        <span class="material-symbols-outlined size-24">local_offer</span>
+    </div>
+    <div class="metadata-items">
+        {{ with .Params.authors }}
+            <div class="metadata-item">
+                {{ range . }}
+                    {{ $href := print (absURL "authors/") (urlize .) }}
+                    <a class="outlined-chip" href="{{ $href }}">{{ . }}</a>
+                {{ end }}
+            </div>
+        {{ end }}
+        <div class="datetime">
+            <div class="metadata-item">
+                <time datetime="{{ $dateTime }}" class="outlined-chip">{{ .PublishDate.Format $dateFormat }}</time>
+            </div>
+        </div>
+        {{ with .Params.tags }}
+            <div class="metadata-item">
+                {{ range . }}
+                    {{ $href := print (absURL "tags/") (urlize .) }}
+                    <a class="outlined-chip" href="{{ $href }}">{{ . }}</a>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div> 

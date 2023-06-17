@@ -10,9 +10,9 @@ theme = 'csxlabs-corporate'
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Posts"
+    name = "Articles"
     pre = "pen-tool"
-    url = "/posts/"
+    url = "/articles/"
     weight = 2
   [[menu.main]]
     name = "Tags"
