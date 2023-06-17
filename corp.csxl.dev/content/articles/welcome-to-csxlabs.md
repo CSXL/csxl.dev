@@ -2,7 +2,7 @@
 title: "Welcome to CSX Labs"
 authors: ["Adam Blumenfeld"]
 date: 2023-06-16
-draft: true
+draft: false
 tags: ["organization", "meta"]
 ---
 Thank you for joining us on our mission to advance technology for humanity! I look forward to working with you. Here are some things to note when working with us:
