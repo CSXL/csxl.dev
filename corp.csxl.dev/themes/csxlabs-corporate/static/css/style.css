@@ -757,6 +757,7 @@ span.size-48 {
   margin: 0 auto;
   padding: 1rem 1rem;
   max-width: 100%;
+  text-decoration: none;
 }
 
 .list-title {
@@ -770,15 +771,23 @@ span.size-48 {
 .list-article-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: inherit;
+  color: var(--brand-purple);
   text-decoration: none;
+}
+
+.list-article-title:hover {
+  color: var(--brand-orange);
 }
 
 .list-summary {
   font-size: 1rem;
   font-weight: 300;
-  color: inherit;
+  color: var(--brand-purple);
   text-decoration: none;
+}
+
+.list-summary:hover {
+  color: var(--brand-orange);
 }
 
 .list-article {
@@ -789,11 +798,6 @@ span.size-48 {
   color: var(--brand-purple);
   text-decoration: none;
   max-width: 45%;
-}
-
-.list-article:hover {
-  border: 1px solid var(--brand-orange);
-  color: var(--brand-orange);
 }
 
 /* For articles */
