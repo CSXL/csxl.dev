@@ -1,0 +1,9 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "content/articles/welcome-to-csxlabs.md"
+        }
+    ]
+}
