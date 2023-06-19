@@ -6,7 +6,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Quicksand:wght@400;500;600&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!-- Favicon -->
+    {{ $favicon := resources.Get "/images/favicon.png" }}
+    <link rel="icon" type="image/png" href="{{ $favicon.RelPermalink }}">
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>
